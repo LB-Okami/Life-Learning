@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.lemelSource.lifeLearning.model.TemaLifeLarning;
+import com.lemelSource.lifeLearning.model.Tema;
 import com.lemelSource.lifeLearning.repository.TemaRepository;
 
 @RestController
@@ -27,27 +27,27 @@ public class TemaController {
 	private TemaRepository repository;
 	
 	@GetMapping
-	public ResponseEntity<List<TemaLifeLarning>> FindAll() {
+	public ResponseEntity<List<Tema>> FindAll() {
 		return ResponseEntity.ok(repository.findAll());
 	}
 	
 	@GetMapping("/{id}")
-	public ResponseEntity<TemaLifeLarning> FindById(@PathVariable Long id) {
+	public ResponseEntity<Tema> FindById(@PathVariable Long id) {
 		return repository.findById(id).map(resp -> ResponseEntity.ok(resp)).orElse(ResponseEntity.notFound().build());
 	}
 	
 	@GetMapping("/titulo/{titulo}")
-	public ResponseEntity<List<TemaLifeLarning>> FindByTitulo(@PathVariable String titulo) {
+	public ResponseEntity<List<Tema>> FindByTitulo(@PathVariable String titulo) {
 		return ResponseEntity.ok(repository.findAllByTituloContainingIgnoreCase(titulo));
 	}
 	
 	@PostMapping
-	public ResponseEntity<TemaLifeLarning> Post(@RequestBody TemaLifeLarning tema) {
+	public ResponseEntity<Tema> Post(@RequestBody Tema tema) {
 		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(tema));
 	}
 	
 	@PutMapping 
-	public ResponseEntity<TemaLifeLarning> Put(@RequestBody TemaLifeLarning tema) {
+	public ResponseEntity<Tema> Put(@RequestBody Tema tema) {
 		return ResponseEntity.status(HttpStatus.OK).body(repository.save(tema));
 	}
 	
