@@ -19,7 +19,7 @@ import com.lemelSource.lifeLearning.model.Postagem;
 import com.lemelSource.lifeLearning.repository.PostagemRepository;
 
 @RestController
-@RequestMapping("/postagem")
+@RequestMapping("/postagens")
 @CrossOrigin(origins = "*",allowedHeaders = "*")
 public class PostagemController {
 
