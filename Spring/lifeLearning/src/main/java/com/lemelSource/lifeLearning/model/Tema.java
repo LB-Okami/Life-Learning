@@ -28,10 +28,6 @@ public class Tema {
 	
 	@NotNull
 	@Size(min = 2, max = 500)
-	private String sumario;
-	
-	@NotNull
-	@Size(min = 2, max = 500)
 	private String tag;
 	
 
@@ -54,15 +50,7 @@ public class Tema {
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
 	}
-
-	public String getSumario() {
-		return sumario;
-	}
-
-	public void setSumario(String sumario) {
-		this.sumario = sumario;
-	}
-
+	
 	public String getTag() {
 		return tag;
 	}
