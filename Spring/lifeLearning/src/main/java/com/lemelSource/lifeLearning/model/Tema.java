@@ -26,7 +26,6 @@ public class Tema {
 	@Size(min = 2, max = 100)
 	private String titulo;
 	
-	@NotNull
 	@Size(min = 2, max = 500)
 	private String tag;
 	

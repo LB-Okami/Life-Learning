@@ -34,7 +34,6 @@ public class Postagem {
 	@Size(min = 2, max = 500)
 	private String descricao;
 	
-	@NotNull
 	@Size(min = 2, max = 500)
 	private String link;
 	

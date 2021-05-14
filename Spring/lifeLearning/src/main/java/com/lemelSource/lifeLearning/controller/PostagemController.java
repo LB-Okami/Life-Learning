@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.lemelSource.lifeLearning.model.Postagem;
+import com.lemelSource.lifeLearning.model.Tema;
 import com.lemelSource.lifeLearning.repository.PostagemRepository;
 
 @RestController
